@@ -1,35 +1,52 @@
-// footer year
-document.getElementById("year").textContent = new Date().getFullYear();
-
-// show on scroll
-const sections = document.querySelectorAll("main section, header.hero");
-const reveal = () => {
-  sections.forEach(s => {
-    const r = s.getBoundingClientRect();
-    if (r.top < window.innerHeight - 100) s.classList.add("visible");
-  });
-};
-window.addEventListener("load", reveal);
-window.addEventListener("scroll", reveal);
-
-// Duck sparkles
-const duck = document.querySelector(".floating-duck");
-if (duck) {
-  setInterval(() => {
-    const rect = duck.getBoundingClientRect();
-    const sparkle = document.createElement("div");
-    sparkle.className = "sparkle";
-    sparkle.style.left = (rect.left + rect.width * 0.5 + (Math.random() * 40 - 20)) + "px";
-    sparkle.style.top = (rect.top + rect.height * 0.5 + (Math.random() * 40 - 20)) + "px";
-    document.body.appendChild(sparkle);
-    setTimeout(() => sparkle.remove(), 2200);
-  }, 1200);
-}
-
-// CTA links
-const ctas = document.querySelectorAll(".btn");
-ctas.forEach(c => {
-  c.addEventListener("keydown", (e) => {
-    if (e.key === "Enter" || e.key === " ") c.click();
-  });
+//  NAV TOGGLE
+const toggle = document.querySelector('.nav__toggle');
+const menu  = document.querySelector('.nav__menu');
+toggle?.addEventListener('click', () => {
+  const vis = menu.dataset.visible === 'true';
+  menu.dataset.visible = !vis;
+  toggle.setAttribute('aria-expanded', !vis);
 });
+
+//  REMOVE LOADER
+window.addEventListener('load', () => document.body.classList.add('loaded'));
+
+//  ANIMATE BARS WHEN IN VIEW
+const bars = document.querySelectorAll('.bar span');
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(en => {
+    if (en.isIntersecting){
+      const w = en.target.closest('.bar').dataset.width;
+      en.target.style.width = w + '%';
+    }
+  });
+}, {threshold:.5});
+bars.forEach(b => obs.observe(b));
+
+//  LIVE STATS (price + holders) – tiny fetch
+async function getStats(){
+  try{
+    const res = await fetch('https://api.stellar.expert/api/explorer/public/asset/LMD-GDREZ3OFPF54PI43EO5OPHBT6XWDKQO33OLHS6SV5LS4AGVI5L73L6SP');
+    const data = await res.json();
+    const price  = data.priceUsd  ? `$${Number(data.priceUsd).toFixed(6)}` : 'n/a';
+    const holders= data.holders   ? data.holders : 'n/a';
+    document.querySelector('.live h2').insertAdjacentHTML('afterend',
+     `<div class="mini-stats">Price: <b>${price}</b> | Holders: <b>${holders}</b></div>`);
+  }catch(e){console.log('stats fetch failed')}
+}
+getStats();
+
+//  COPY ADDRESS TOAST
+const CONTRACT = 'LMD-GDREZ3OFPF54PI43EO5OPHBT6XWDKQO33OLHS6SV5LS4AGVI5L73L6SP';
+document.addEventListener('click', e => {
+  if(e.target.dataset.copy !== undefined){
+    navigator.clipboard.writeText(CONTRACT);
+    toast('Contract copied!');
+  }
+});
+function toast(msg){
+  const t = document.createElement('div');
+  t.textContent = msg;
+  t.style.cssText = 'position:fixed;bottom:2rem;left:50%;transform:translateX(-50%);background:var(--purple);color:#fff;padding:.5rem 1.2rem;border-radius:30px;font-size:.9rem;z-index:2000';
+  document.body.appendChild(t);
+  setTimeout(() => t.remove(), 2200);
+}
