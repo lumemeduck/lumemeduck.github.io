@@ -1,161 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Lumeme Duck ($LMD)</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="logo.png" type="image/png" />
-  <script src="https://kit.fontawesome.com/a2d9d5b6b6.js" crossorigin="anonymous"></script>
-  <meta name="description" content="Lumeme Duck ($LMD) — Inspiring the world, one meme at a time." />
+  <meta charset="UTF-8">
+  <title>Lumeme Duck | $LMD – Meme Coin With Heart</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Fair-launched on Stellar – spread quacks of love & kindness with $LMD.">
+  <link rel="icon" type="image/png" href="img/lmd.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <!-- FLOATING DUCK -->
-  <div class="floating-duck" aria-hidden="true">🦆</div>
+  <!--  LOADER  -->
+  <div id="loader">
+    <img src="img/lmd.png" alt="duck" class="loader-duck">
+    <p>Loading quackiness…</p>
+  </div>
 
-  <!-- HERO -->
-  <header class="hero" id="home">
-    <img src="lmd.png" alt="Lumeme Duck logo" class="logo" />
-    <h1>Lumeme Duck <span class="ticker">($LMD)</span></h1>
-    <p class="tagline">Inspiring the world, one step at a time.</p>
+  <!--  NAV  -->
+  <header class="nav">
+    <div class="nav__container">
+      <a href="#home" class="nav__logo">
+        <img src="img/lmd.png" alt="$LMD"><span>LUMEME DUCK</span>
+      </a>
 
-    <div class="cta-buttons">
-      <a class="btn gold" id="buy-now" href="#buy-lmd">Buy $LMD</a>
-      <a class="btn outline" id="view-chart" href="#chart">Live Chart</a>
+      <button class="nav__toggle" aria-label="open menu">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <ul class="nav__menu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#tokenomics">Tokenomics</a></li>
+        <li><a href="#how">How to Buy</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </div>
-
-    <p class="micro">Official site • Community-first • Minimal tax</p>
   </header>
 
-  <!-- ABOUT -->
-  <main>
-    <section class="about" id="about">
-      <h2>About $LMD</h2>
+  <!--  HERO  -->
+  <section id="home" class="hero">
+    <div class="hero__bg"></div>
+    <div class="hero__content">
+      <h1 class="glitch" data-text="DISCOVER LUMEME DUCK">DISCOVER LUMEME DUCK</h1>
+      <p>A fun token with heart, love and purpose. Hop in … this is just the beginning.</p>
+      <div class="hero__btns">
+        <a href="https://lu.meme/swap/LMD-GDREZ3OFPF54PI43EO5OPHBT6XWDKQO33OLHS6SV5LS4AGVI5L73L6SP" target="_blank" class="btn btn--primary">
+          <i class="fas fa-coins"></i> Buy $LMD
+        </a>
+        <a href="https://app.lumemeduck.xyz/" target="_blank" class="btn btn--secondary">
+          <i class="fa-solid fa-chart-line"></i> LMD Quotes
+        </a>
+      </div>
+      <div class="hero__socials">
+        <a href="https://x.com/lumeme_duck/" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://t.me/lumeme_duck" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+        <a href="https://instagram.com/lumeme_duck/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://tiktok.com/@lmd_quotes/" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="https://youtube.com/@lumeme_duck/" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!--  ABOUT  -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2>About Lumeme Duck’s Mission</h2>
       <p>
-        Lumeme Duck ($LMD) is a small, community-driven memecoin with a mission: spread positivity, inspire small acts of kindness,
-        and build a joyful culture around everyday motivation. We combine humor, micro-philanthropy and a long-term roadmap.
+        In a celestial realm known as the Æthereal Pond, Lumeme Duck was born – a radiant creature tasked with
+        spreading contagious joy, scalable kindness and boundless love. $LMD is not “just another meme coin”;
+        it is a movement to rewrite crypto culture and make memes matter.
       </p>
-    </section>
-
-    <!-- PUMPAMENTALS -->
-    <section class="pumpamentals" id="pumpamentals">
-      <h2>Pumpamentals</h2>
-      <p class="intro">Why $LMD has the heart + fundamentals to thrive. Edit these bullet points to match your project's facts.</p>
-
-      <div class="pump-grid">
-        <article class="pump-card">
-          <h3>Community First</h3>
-          <p>Active, friendly community channels and weekly engagement events.</p>
-        </article>
-
-        <article class="pump-card">
-          <h3>Locked Liquidity</h3>
-          <p>LP is locked to provide trust and stability to holders.</p>
-        </article>
-
-        <article class="pump-card">
-          <h3>Zero Tax</h3>
-          <p>No buy/sell tax to keep user experience frictionless.</p>
-        </article>
-
-        <article class="pump-card">
-          <h3>Transparent Roadmap</h3>
-          <p>Clear milestones: app, listings, charity initiatives, community tools.</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- TOKENOMICS -->
-    <section class="tokenomics" id="tokenomics">
-      <h2>Tokenomics</h2>
-      <div class="token-grid">
-        <div class="token-box">
-          <h3>Supply</h3>
-          <p>1,000,000,000 $LMD</p>
-        </div>
-        <div class="token-box">
-          <h3>Liquidity</h3>
-          <p>Locked 🔒</p>
-        </div>
-        <div class="token-box">
-          <h3>Tax</h3>
-          <p>0% Buy / 0% Sell</p>
-        </div>
-        <div class="token-box">
-          <h3>Distribution</h3>
-          <p>Community / Team / Treasury</p>
+      <div class="kyc-banner">
+        <img src="https://cryptogugu.com/static/app/img/banner-kyс.png" alt="KYC banner">
+        <img src="https://cryptogugu.com/media/coin_images/lumeme-duck-lmd_cv9ZtrU.webp" alt="logo" class="kyc-logo">
+        <div class="kyc-text">
+          <div class="kyc-title">KYC VERIFIED</div>
+          <div class="kyc-name">lumeme duck</div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- HOW TO BUY -->
-    <section class="how-to-buy" id="how-to-buy">
-      <h2>How to Buy</h2>
-      <p class="intro">Simple steps to add $LMD to your wallet. Replace placeholders with your DEX / contract addresses.</p>
-
-      <ol class="buy-steps">
-        <li>
-          <strong>1. Install a wallet</strong>
-          <p>Use MetaMask (Chrome/Firefox) or Trust Wallet (mobile).</p>
-        </li>
-        <li>
-          <strong>2. Add network</strong>
-          <p>If needed, add the network (BSC / Ethereum / Stellar) in your wallet settings.</p>
-        </li>
-        <li>
-          <strong>3. Swap for $LMD</strong>
-          <p>Open PancakeSwap / DEX > Paste the token contract > Enter amount > Swap. (Dummy link below)</p>
-          <p><a href="#buy-lmd" class="small-link">Open DEX (dummy)</a></p>
-        </li>
-        <li>
-          <strong>4. Add token</strong>
-          <p>After purchase, add token to wallet by pasting the contract address in 'Add Token'.</p>
-        </li>
-      </ol>
-    </section>
-
-    <!-- LIVE CHART -->
-    <section class="live-chart" id="chart">
-      <h2>Live Chart</h2>
-      <p class="intro">Realtime price feeds — replace the iframe `src` with your DexScreener / DexTools link.</p>
-      <div class="chart-wrap">
-        <!-- Placeholder iframe: swap src with DexScreener or your chart provider -->
-        <iframe src="about:blank" title="Live chart" loading="lazy"></iframe>
+  <!--  PUMPAMENTALS  -->
+  <section class="pump">
+    <div class="container">
+      <h2>$LMD Token Pumpamentals</h2>
+      <div class="cards">
+        <article class="card"><i class="fa-solid fa-rocket"></i>
+          <h3>Fairly Launched</h3>
+          <p>Ownership & control by traders and holders from day one.</p>
+        </article>
+        <article class="card"><i class="fa-solid fa-lock"></i>
+          <h3>Liquidity Locked</h3>
+          <p>Security & stability for peace of mind.</p>
+        </article>
+        <article class="card"><i class="fa-solid fa-users"></i>
+          <h3>Community Driven</h3>
+          <p>Mint & liquidity contracts locked – DAO style.</p>
+        </article>
+        <article class="card"><i class="fa-solid fa-piggy-bank"></i>
+          <h3>Project Funds</h3>
+          <p>10 % buy-back allocated for marketing & development.</p>
+        </article>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ROADMAP -->
-    <section class="roadmap" id="roadmap">
-      <h2>Roadmap</h2>
-      <ul class="timeline">
-        <li><span>Phase 1:</span> Launch & Community Growth</li>
-        <li><span>Phase 2:</span> LMD Quotes App & Partnerships</li>
-        <li><span>Phase 3:</span> Exchange Listings & Global Reach</li>
-        <li><span>Phase 4:</span> Charity & Acts of Kindness</li>
-      </ul>
-    </section>
-
-    <!-- JOIN US -->
-    <section class="join" id="join">
-      <h2>Join the Movement</h2>
-      <p>Follow us and join the community to help spread light.</p>
-      <div class="socials">
-        <a href="https://x.com/lumeme_duck/" target="_blank" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
-        <a href="https://facebook.com/lumemeduck/" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
-        <a href="https://instagram.com/lumeme_duck/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://tiktok.com/@lmd_quotes/" target="_blank" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-        <a href="https://youtube.com/@lumeme_duck/" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-        <a href="https://t.me/lumeme_duck/" target="_blank" aria-label="Telegram"><i class="fa fa-telegram"></i></a>
-        <a href="https://whatsapp.com/channel/0029Va7Y5ca11ulPjifLuh1u/" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+  <!--  TOKENOMICS  -->
+  <section id="tokenomics" class="tokenomics">
+    <div class="container">
+      <h2>$LMD Token Distribution</h2>
+      <p class="sub">Total supply <b>1 000 000 000</b> – 100 % fair-launched on SDEX.</p>
+      <div class="bars">
+        <div class="bar" data-width="80"><label>Liquidity Locked <b>80 %</b></label><span></span></div>
+        <div class="bar" data-width="10"><label>Marketing <b>10 %</b></label><span></span></div>
+        <div class="bar" data-width="10"><label>Treasury <b>10 %</b></label><span></span></div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>© <span id="year"></span> Lumeme Duck — Inspiring the world, one meme at a time 🦆</p>
+  <!--  LIVE DATA  -->
+  <section class="live">
+    <div class="container">
+      <h2>$LMD Live Data Summary</h2>
+      <iframe id="stats"
+        src="https://stellar.expert/widget/public/asset/summary/LMD-GDREZ3OFPF54PI43EO5OPHBT6XWDKQO33OLHS6SV5LS4AGVI5L73L6SP"
+        frameborder="0"></iframe>
+    </div>
+  </section>
+
+  <!--  HOW TO BUY  -->
+  <section id="how" class="how">
+    <div class="container">
+      <h2>How to Buy $LMD in 4 Quacks</h2>
+      <div class="cards">
+        <article class="card">
+          <span>1</span>
+          <h3>Create Stellar Wallet</h3>
+          <p>One-click signup on lu.meme with your e-mail.</p>
+          <a href="https://lu.meme" target="_blank" class="btn btn--primary">Create now</a>
+        </article>
+        <article class="card">
+          <span>2</span>
+          <h3>Fund With XLM</h3>
+          <p>Send XLM from any exchange or buy by card.</p>
+          <a href="https://changelly.com/buy?from=usd&to=xlm&amount=150&ref_id=gOKVmAIKIrxpZeHp"
+            target="_blank" class="btn btn--primary">Buy Lumens</a>
+        </article>
+        <article class="card">
+          <span>3</span>
+          <h3>Add Trustline</h3>
+          <p>Done automatically when you swap on lu.meme.</p>
+          <a href="https://lu.meme/swap/LMD-GDREZ3OFPF54PI43EO5OPHBT6XWDKQO33OLHS6SV5LS4AGVI5L73L6SP"
+            target="_blank" class="btn btn--primary">Add trustline</a>
+        </article>
+        <article class="card">
+          <span>4</span>
+          <h3>Swap XLM → LMD</h3>
+          <p>1 % fee instant swap – you’re officially a duckling!</p>
+          <a href="https://lu.meme/swap/LMD-GDREZ3OFPF54PI43EO5OPHBT6XWDKQO33OLHS6SV5LS4AGVI5L73L6SP"
+            target="_blank" class="btn btn--primary">Swap now</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!--  STELLAR INFO  -->
+  <section class="stellar">
+    <div class="container">
+      <div class="stellar__text">
+        <h2>About the Stellar Network</h2>
+        <p>Stellar is an open-source, low-fee blockchain with a built-in DEX – perfect for cross-border
+          payments and inclusive DeFi. $LMD lives here.</p>
+        <div class="stellar__btns">
+          <a href="https://stellar.expert/explorer/public/asset/LMD-GDREZ3OFPF54PI43EO5OPHBT6XWDKQO33OLHS6SV5LS4AGVI5L73L6SP"
+            target="_blank" class="btn btn--secondary">View Explorer</a>
+          <a href="https://stellarterm.com/swap/XLM-native/LMD-GDREZ3OFPF54PI43EO5OPHBT6XWDKQO33OLHS6SV5LS4AGVI5L73L6SP"
+            target="_blank" class="btn btn--primary">Buy $LMD</a>
+        </div>
+      </div>
+      <div class="stellar__img">
+        <img src="img/stellar.jpg" alt="Stellar">
+      </div>
+    </div>
+  </section>
+
+  <!--  CONTACT  -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contact the Flock</h2>
+      <p>Partnerships, questions, or just want to quack? Reach out.</p>
+      <div class="contact__grid">
+        <a href="mailto:info@lumemeduck.xyz" class="btn btn--secondary"><i class="fa fa-envelope"></i> Email</a>
+        <a href="https://t.me/KareemKR" target="_blank" class="btn btn--secondary"><i class="fa-brands fa-telegram"></i> Admin</a>
+        <a href="https://t.me/lumeme_duck1" target="_blank" class="btn btn--secondary"><i class="fa-brands fa-telegram"></i> Group</a>
+        <a href="https://t.me/lumeme_duck" target="_blank" class="btn btn--secondary"><i class="fa-brands fa-telegram"></i> Channel</a>
+      </div>
+    </div>
+  </section>
+
+  <!--  DISCLAIMER  -->
+  <footer class="footer">
+    <div class="container">
+      <h4>Risk Disclosure</h4>
+      <p>Lumeme Duck (LMD) is not affiliated with stellar.org or lu.meme. Tokens are not an investment
+        product. Always DYOR. The team is not liable for any losses. If the Stellar blockchain ceases to
+        exist, LMD ceases to exist.</p>
+      <p class="copyright">© 2025 Lumeme Duck. Created with ♥ on <a href="https://stellar.org" target="_blank">Stellar</a></p>
+    </div>
   </footer>
 
   <script src="script.js"></script>
 </body>
-</html>
+                                                                                      </html>
