@@ -58,11 +58,11 @@ h2{font-size:2.2rem;margin-bottom:2rem;text-align:center}
 
 /*  ABOUT  */
 .about{background:var(--glass);border-radius:var(--radius);box-shadow:var(--shadow);padding:2.5rem 2rem}
-.kyc-banner{position:relative;display:inline-block;margin-top:1.5rem;border-radius:10px;overflow:hidden;line-height:0;}
+.kyc-banner{position:relative;display:inline-block;margin-top:1.5rem;border-radius:10px;overflow:hidden;line-height:normal;}
 .kyc-logo{position:absolute;left:12px;bottom:12px;width:48px;height:48px;border-radius:7px}
 .kyc-text{position:absolute;left:68px;bottom:12px}
 .kyc-title{margin-top:7px;line-height:normal;font-size:12px;font-weight:500;margin-bottom:4px;text-transform:uppercase;color:#f8dd00}
-.kyc-name{font-size:24px;line-height:normal;font-weight:800;letter-spacing:-1.2px}
+.kyc-name{font-size:24px;line-height:normal;font-weight:700;letter-spacing:-1.2px}
 
 /*  CARDS  */
 .cards{display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
@@ -81,7 +81,7 @@ h2{font-size:2.2rem;margin-bottom:2rem;text-align:center}
 .bar:nth-child(3) span{background:#ffc700}
 
 /*  LIVE DATA  */
-.live iframe{width:100%;min-height:600px;border:2px solid var(--purple);border-radius:var(--radius)}
+.live iframe{width:100%;min-height:530px;border:2px solid var(--purple);border-radius:var(--radius)}
 
 /*  STELLAR  */
 .stellar .container{display:grid;gap:3rem;align-items:center}
