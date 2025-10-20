@@ -36,7 +36,7 @@ async function getStats(){
 getStats();
 
 //  COPY ADDRESS TOAST
-const CONTRACT = 'LMD-GDREZ3OFPF54PI43EO5OPHBT6XWDKQO33OLHS6SV5LS4AGVI5L73L6SP';
+const CONTRACT = 'GDREZ3OFPF54PI43EO5OPHBT6XWDKQO33OLHS6SV5LS4AGVI5L73L6SP';
 document.addEventListener('click', e => {
   if(e.target.dataset.copy !== undefined){
     navigator.clipboard.writeText(CONTRACT);
@@ -50,3 +50,17 @@ function toast(msg){
   document.body.appendChild(t);
   setTimeout(() => t.remove(), 2200);
 }
+
+// LOATING BUBBLES
+document.addEventListener("DOMContentLoaded", () => {
+  const bubbles = document.querySelector(".bubbles");
+  for (let i = 0; i < 20; i++) {
+    const span = document.createElement("span");
+    const size = Math.random() * 50 + 10;
+    span.style.width = `${size}px`;
+    span.style.height = `${size}px`;
+    span.style.left = `${Math.random() * 100}%`;
+    span.style.animationDuration = `${8 + Math.random() * 10}s`;
+    bubbles.appendChild(span);
+  }
+});
