@@ -89,56 +89,56 @@ function toast(msg){
   setTimeout(() => t.remove(), 2200);
 }
 
-// Animation
-const coinShower = document.querySelector('.coin-shower');
-const coinCount = 50;
+  // STAR FIELD
+  const starField = document.querySelector('.star-field');
+  const starCount = 100;
 
-for (let i = 0; i < coinCount; i++) {
-  const coin = document.createElement('span');
-  coin.classList.add('coin');
-  coin.textContent = '🪙';
-
-  // Random horizontal position
-  coin.style.left = Math.random() * 100 + '%';
-
-  // Random font size
-  coin.style.fontSize = (10 + Math.random() * 20) + 'px';
-
-  // Random drop duration
-  const dropDur = (4 + Math.random() * 6) + 's';
-  const driftDur = (2 + Math.random() * 4) + 's';
-  const sparkleDur = (1 + Math.random() * 2) + 's';
-  coin.style.animationDuration = `${dropDur}, ${driftDur}, ${sparkleDur}`;
-
-  // Random animation delay
-  coin.style.animationDelay = (Math.random() * 10) + 's';
-
-  coinShower.appendChild(coin);
-}
-
-   // STAR FIELD
-const starField = document.querySelector('.star-field');
-const starCount = 100; // total stars
-
-for (let i = 0; i < starCount; i++) {
+  for (let i = 0; i < starCount; i++) {
   const star = document.createElement('span');
   star.classList.add('star');
 
-  // Random initial position
+  // Random position
   star.style.left = Math.random() * 100 + '%';
   star.style.top = Math.random() * 100 + '%';
 
   // Random size
-  const size = 1 + Math.random() * 2; // 1px to 3px
+  const size = 1 + Math.random() * 2;
   star.style.width = size + 'px';
   star.style.height = size + 'px';
 
-  // Random animation duration (5s to 20s)
+  // Random duration
   const dur = 5 + Math.random() * 15;
   star.style.animationDuration = dur + 's';
 
-  // Random animation delay
+  // Random delay
   star.style.animationDelay = Math.random() * 20 + 's';
 
   starField.appendChild(star);
 }
+
+const shootingField = document.querySelector('.shooting-star-field');
+
+function createShootingStar() {
+  const star = document.createElement('span');
+  star.classList.add('shooting-star');
+
+  // Random start position
+  const startX = Math.random() * window.innerWidth * 0.8;
+  const startY = Math.random() * window.innerHeight * 0.5;
+  star.style.left = startX + 'px';
+  star.style.top = startY + 'px';
+
+  // Random duration
+  const duration = 0.5 + Math.random() * 1; // 0.5s to 1.5s
+  star.style.animationDuration = duration + 's';
+
+  shootingField.appendChild(star);
+
+  // Remove star after animation ends
+  star.addEventListener('animationend', () => star.remove());
+}
+
+// Randomly create shooting stars every 1-3 seconds
+setInterval(() => {
+  if (Math.random() > 0.5) createShootingStar();
+}, 1000);
