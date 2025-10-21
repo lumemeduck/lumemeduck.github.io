@@ -39,30 +39,37 @@ ul{list-style:none}
 .nav__logo img{width:30px;height:30px}
 .nav__toggle{display:flex;font-size:1.4rem;cursor:pointer}
 .nav__menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  position: absolute;
+  top: 60px;
+  right: 1rem;
   background: #0c0c0f;
-  display: flex;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  display: none;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 1.5rem;
-  padding: 4rem 2rem;
-  transform: translateX(100%);
-  transition: transform 0.35s ease-out;
+  gap: 1rem;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
   z-index: 1001;
-  overflow-y: auto;
 }
 
 .nav__menu[data-visible="true"] {
-  transform: translateX(0);
-  height: 100vh;
-  overflow-y: auto;
-  display: flex !important;
-  justify-content: center;
+  display: flex;
+}
+
+ .nav__menu[data-visible="true"] {
+  animation: dropdown 0.25s ease-out forwards;
+}
+
+@keyframes dropdown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .nav__close {
