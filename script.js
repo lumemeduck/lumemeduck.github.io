@@ -88,3 +88,17 @@ function toast(msg){
   document.body.appendChild(t);
   setTimeout(() => t.remove(), 2200);
 }
+
+// Glitch animation
+document.addEventListener('DOMContentLoaded', function() {
+  const glitchText = document.querySelector('.glitch');
+  if (!glitchText) return;
+
+  // Fallback for mobile devices
+  glitchText.style.cssText = `
+    color: #fff;
+    background: linear-gradient(45deg, var(--purple), var(--pink), var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  `;
+});
