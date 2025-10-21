@@ -38,10 +38,6 @@ ul{list-style:none}
 
 /* NAV DRAWER */
 
-.nav__menu[data-visible="true"] {
-  transform: translateX(0);
-}
-
 .nav__close {
   position: absolute;
   top: 1.2rem;
