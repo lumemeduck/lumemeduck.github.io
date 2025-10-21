@@ -37,6 +37,9 @@ ul{list-style:none}
 .nav__toggle{display:flex;font-size:1.4rem;cursor:pointer}
 
 /* NAV DRAWER */
+.nav__menu[data-visible="true"] {
+  transform: translateX(0);
+}
 
 .nav__close {
   position: absolute;
