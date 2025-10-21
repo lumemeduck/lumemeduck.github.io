@@ -1,10 +1,42 @@
-//  NAV TOGGLE
+// NAV TOGGLE
 const toggle = document.querySelector('.nav__toggle');
-const menu  = document.querySelector('.nav__menu');
-toggle?.addEventListener('click', () => {
-  const vis = menu.dataset.visible === 'true';
-  menu.dataset.visible = !vis;
-  toggle.setAttribute('aria-expanded', !vis);
+const closeBtn = document.querySelector('.nav__close');
+const menu = document.querySelector('.nav__menu');
+
+let overlay = document.querySelector('.nav__overlay');
+if (!overlay) {
+  overlay = document.createElement('div');
+  overlay.className = 'nav__overlay';
+  document.body.appendChild(overlay);
+}
+
+function openMenu() {
+  menu.dataset.visible = 'true';
+  toggle.setAttribute('aria-expanded', 'true');
+  overlay.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeMenu() {
+  menu.dataset.visible = 'false';
+  toggle.setAttribute('aria-expanded', 'false');
+  overlay.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+toggle.addEventListener('click', openMenu);
+closeBtn.addEventListener('click', closeMenu);
+overlay.addEventListener('click', closeMenu);
+
+let touchStartX = 0;
+menu.addEventListener('touchstart', e => touchStartX = e.touches[0].clientX);
+menu.addEventListener('touchend', e => {
+  const diff = touchStartX - e.changedTouches[0].clientX;
+  if (diff >= 60) closeMenu();
+});
+
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 768) closeMenu();
 });
 
 //  REMOVE LOADER
