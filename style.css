@@ -38,7 +38,7 @@ ul{list-style:none}
 
 /* NAV DRAWER */
 .nav__menu[data-visible="true"] {
-  transform: translateX(0);
+  transform: translateX(100%);
 }
 
 .nav__close {
