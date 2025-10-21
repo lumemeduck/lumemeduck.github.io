@@ -1,7 +1,8 @@
-// NAV TOGGLE
+//  NAV TOGGLE
 const toggle = document.querySelector('.nav__toggle');
 const closeBtn = document.querySelector('.nav__close');
 const menu = document.querySelector('.nav__menu');
+const menuItems = document.querySelectorAll('.nav__menu li a');
 
 let overlay = document.querySelector('.nav__overlay');
 if (!overlay) {
@@ -27,6 +28,10 @@ function closeMenu() {
 toggle.addEventListener('click', openMenu);
 closeBtn.addEventListener('click', closeMenu);
 overlay.addEventListener('click', closeMenu);
+
+menuItems.forEach(item => {
+  item.addEventListener('click', closeMenu);
+});
 
 let touchStartX = 0;
 menu.addEventListener('touchstart', e => touchStartX = e.touches[0].clientX);
