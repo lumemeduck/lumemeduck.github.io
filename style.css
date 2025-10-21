@@ -115,6 +115,7 @@ ul{list-style:none}
   font-size: 2rem;
   font-weight: 700;
   line-height: 1.2;
+  font-family: 'Poppins', sans-serif;
 }
 
 @media (min-width: 768px) {
@@ -131,8 +132,13 @@ ul{list-style:none}
   left: 0;
   width: 100%;
   height: 100%;
-  display: block; 
+  display: block;
   pointer-events: none;
+
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
 }
 
 .glitch::before {
