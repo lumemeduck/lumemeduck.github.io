@@ -44,6 +44,12 @@ window.addEventListener('resize', () => {
   if (window.innerWidth > 768) closeMenu();
 });
 
+window.addEventListener('DOMContentLoaded', (event) => {
+  if (window.innerWidth > 768) {
+    menu.style.display = 'flex';
+  }
+});
+
 //  REMOVE LOADER
 window.addEventListener('load', () => document.body.classList.add('loaded'));
 
