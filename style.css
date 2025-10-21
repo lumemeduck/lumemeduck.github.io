@@ -40,7 +40,7 @@ ul{list-style:none}
 .nav__toggle{display:flex;font-size:1.4rem;cursor:pointer}
 .nav__menu {
   position: absolute;
-  top: 70px;
+  top: 65px;
   right: 1rem;
   background: #0c0c0f;
   border-radius: 12px;
