@@ -88,3 +88,30 @@ function toast(msg){
   document.body.appendChild(t);
   setTimeout(() => t.remove(), 2200);
 }
+
+// Animation
+const coinShower = document.querySelector('.coin-shower');
+const coinCount = 50;
+
+for (let i = 0; i < coinCount; i++) {
+  const coin = document.createElement('span');
+  coin.classList.add('coin');
+  coin.textContent = '🪙';
+
+  // Random horizontal position
+  coin.style.left = Math.random() * 100 + '%';
+
+  // Random font size
+  coin.style.fontSize = (10 + Math.random() * 20) + 'px';
+
+  // Random drop duration
+  const dropDur = (4 + Math.random() * 6) + 's';
+  const driftDur = (2 + Math.random() * 4) + 's';
+  const sparkleDur = (1 + Math.random() * 2) + 's';
+  coin.style.animationDuration = `${dropDur}, ${driftDur}, ${sparkleDur}`;
+
+  // Random animation delay
+  coin.style.animationDelay = (Math.random() * 10) + 's';
+
+  coinShower.appendChild(coin);
+}
