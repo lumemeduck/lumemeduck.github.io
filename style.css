@@ -91,10 +91,13 @@ h2{font-size:2.2rem;margin-bottom:2rem;text-align:center}
 /*  CONTACT  */
 .contact__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem;margin-top:2rem}
 
+/*  DISCLAIMER */
+.disclaimer{text-align:center;padding:3rem 1rem;font-size:.8rem;color:var(--grey)}
+.disclaimer h3{color:var(--pink);margin-bottom:1rem}
+
 /*  FOOTER  */
 .footer{background:#080808;text-align:center;padding:3rem 1rem;font-size:.8rem;color:var(--grey)}
-.footer h4{color:var(--pink);margin-bottom:1rem}
-.footer a:hover{color:var(--pink)}
+.footer .a:hover{color:var(--pink)}
 
 /*  RESPONSIVE NAV  */
 @media(max-width:768px){
