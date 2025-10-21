@@ -13,6 +13,7 @@ if (!overlay) {
 
 function openMenu() {
   menu.dataset.visible = 'true';
+  menu.offsetHeight;
   toggle.setAttribute('aria-expanded', 'true');
   overlay.classList.add('active');
   document.body.style.overflow = 'hidden';
