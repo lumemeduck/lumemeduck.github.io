@@ -115,3 +115,30 @@ for (let i = 0; i < coinCount; i++) {
 
   coinShower.appendChild(coin);
 }
+
+   // STAR FIELD
+const starField = document.querySelector('.star-field');
+const starCount = 100; // total stars
+
+for (let i = 0; i < starCount; i++) {
+  const star = document.createElement('span');
+  star.classList.add('star');
+
+  // Random initial position
+  star.style.left = Math.random() * 100 + '%';
+  star.style.top = Math.random() * 100 + '%';
+
+  // Random size
+  const size = 1 + Math.random() * 2; // 1px to 3px
+  star.style.width = size + 'px';
+  star.style.height = size + 'px';
+
+  // Random animation duration (5s to 20s)
+  const dur = 5 + Math.random() * 15;
+  star.style.animationDuration = dur + 's';
+
+  // Random animation delay
+  star.style.animationDelay = Math.random() * 20 + 's';
+
+  starField.appendChild(star);
+}
