@@ -46,7 +46,7 @@ ul{list-style:none}
 .glitch::after{animation:glitch-2 .5s infinite;color:var(--pink);z-index:-2}
 @keyframes glitch-1{0%,100%{clip-path:inset(0 0 0 0)}20%{clip-path:inset(20% 0 60% 0)}40%{clip-path:inset(50% 0 10% 0)}}
 @keyframes glitch-2{0%,100%{clip-path:inset(0 0 0 0)}20%{clip-path:inset(60% 0 20% 0)}40%{clip-path:inset(10% 0 50% 0)}}
-.hero p{font-size:1.1rem;color:var(--grey);max-width:600px;margin:.5rem auto 2rem}
+.hero p{font-size:0.9rem;color:#fefefe;max-width:600px;margin:.5rem auto 2rem}
 .hero__btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
 .hero__socials{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;gap:1.2rem;font-size:1.4rem}
 .hero__socials a:hover{color:var(--pink)}
@@ -81,7 +81,7 @@ h2{font-size:2.2rem;margin-bottom:2rem;text-align:center}
 .bar:nth-child(3) span{background:#ffc700}
 
 /*  LIVE DATA  */
-.live iframe{width:100%;min-height:530px;border:1px solid rgba(255,255,255,.1);border-radius:var(--radius)}
+.live iframe{width:100%;min-height:530px;border:1px solid #888;border-radius:var(--radius)}
 
 /*  STELLAR  */
 .stellar .container{display:grid;gap:3rem;align-items:center}
