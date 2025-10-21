@@ -1,5 +1,6 @@
 //  NAV TOGGLE
 const toggle = document.querySelector('.nav__toggle');
+const closeBtn = document.querySelector('.nav__close');
 const menu = document.querySelector('.nav__menu');
 const menuItems = document.querySelectorAll('.nav__menu li a');
 
@@ -25,6 +26,7 @@ function closeMenu() {
 }
 
 toggle.addEventListener('click', openMenu);
+closeBtn.addEventListener('click', closeMenu);
 overlay.addEventListener('click', closeMenu);
 
 menuItems.forEach(item => {
