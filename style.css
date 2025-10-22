@@ -39,7 +39,7 @@ ul{list-style:none}
   top: 62px;
   right: 1rem;
   background: rgba(12,12,15,.7);
-  backdrop-filter:blur(10px);
+  backdrop-filter:blur(12px);
   border-radius: 0;
   display: none;
   flex-direction: column;
@@ -218,7 +218,7 @@ ul{list-style:none}
 /* HERO SOCIALS */
 .hero__socials {
   position: absolute;
-  bottom: 5rem;
+  bottom: 3.5rem;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
