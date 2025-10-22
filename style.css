@@ -33,7 +33,7 @@ ul{list-style:none}
 .nav__container{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:1rem 1.5rem}
 .nav__logo{display:flex;align-items:center;gap:0.5rem;font-weight:700;font-size:1.1rem}
 .nav__logo img{width:30px;height:30px}
-.nav__toggle{display:flex;font-size:1.5rem;cursor:pointer}
+.nav__toggle{display:flex;font-size:1.5rem;cursor:pointer;background:none;border:none;}
 .nav__menu {
   position: absolute;
   top: 62px;
