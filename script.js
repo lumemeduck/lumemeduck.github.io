@@ -23,6 +23,7 @@ function closeMenu() {
   menu.dataset.visible = 'false';
   toggle.setAttribute('aria-expanded', 'false');
   overlay.classList.remove('active');
+  overlay.style.opacity = '0';
   document.body.style.overflow = '';
 }
 
