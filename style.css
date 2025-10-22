@@ -398,16 +398,11 @@ h2{font-size:2.2rem;margin-bottom:2rem;text-align:center}
     padding: 0;
   }
 
-   .nav__menu--desktop li {
-  text-align: right;
-  font-size:1.1rem;
-  font-weight:700;
-   }
-
   .nav__menu--desktop li a {
     color: #fff;
     text-decoration: none;
-    font-weight: 500;
+    font-size: 1.1rem;
+    font-weight: 700;
     transition: color 0.3s ease;
   }
 
