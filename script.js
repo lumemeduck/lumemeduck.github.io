@@ -91,7 +91,7 @@ function toast(msg){
 
   // STAR FIELD
   const starField = document.querySelector('.star-field');
-  const starCount = 100;
+  const starCount = 50;
 
   for (let i = 0; i < starCount; i++) {
   const star = document.createElement('span');
@@ -111,7 +111,7 @@ function toast(msg){
   star.style.animationDuration = dur + 's';
 
   // Random delay
-  star.style.animationDelay = Math.random() * 20 + 's';
+  star.style.animationDelay = Math.random() * 50 + 's';
 
   starField.appendChild(star);
 }
@@ -129,7 +129,7 @@ function createShootingStar() {
   star.style.top = startY + 'px';
 
   // Random duration
-  const duration = 0.5 + Math.random() * 1; // 0.5s to 1.5s
+  const duration = 1 + Math.random() * 2; // 0.5s to 1.5s
   star.style.animationDuration = duration + 's';
 
   shootingField.appendChild(star);
