@@ -335,20 +335,48 @@ h2{font-size:2.2rem;margin-bottom:2rem;text-align:center}
 
 .shooting-stars::after {
   animation-delay: 3s;
-  left: 60%;
-  top: 20%;
+  left: 45%;
+  top: 10%;
+}
+
+.shooting-stars .rare {
+  position: absolute;
+  width: 3px;
+  height: 100px;
+  background: linear-gradient(45deg, #fff, transparent);
+  opacity: 0;
+  top: 5%;
+  left: 40%;
+  animation: rareShootStar 15s linear infinite;
 }
 
 @keyframes shootStar {
   0% {
-    transform: translate(100vw, -100vh) rotate(45deg);
+    transform: translate(50vw, -20vh) rotate(135deg);
     opacity: 0;
   }
   10% {
     opacity: 1;
   }
   100% {
-    transform: translate(-20vw, 120vh) rotate(45deg);
+    transform: translate(-30vw, 60vh) rotate(135deg);
+    opacity: 0;
+  }
+}
+
+@keyframes rareShootStar {
+  0%, 60% {
+    opacity: 0;
+    transform: translate(60vw, -30vh) rotate(140deg);
+  }
+  65% {
+    opacity: 1;
+  }
+  85% {
+    transform: translate(-20vw, 70vh) rotate(140deg);
+    opacity: 0.8;
+  }
+  100% {
     opacity: 0;
   }
 }
