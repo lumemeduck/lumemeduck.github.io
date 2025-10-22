@@ -88,3 +88,17 @@ function toast(msg){
   document.body.appendChild(t);
   setTimeout(() => t.remove(), 2200);
 }
+
+  // SCROLL EFFECT
+const reveals = document.querySelectorAll('.reveal, .reveal-stagger');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.25 });
+
+reveals.forEach(r => observer.observe(r));
