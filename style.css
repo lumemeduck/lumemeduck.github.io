@@ -40,11 +40,11 @@ ul{list-style:none}
 .nav__toggle{display:flex;font-size:1.4rem;cursor:pointer}
 .nav__menu {
   position: absolute;
-  top: 62px;
+  top: 60px;
   right: 1rem;
-  background: #0c0c0f;
+  background: rgba(12,12,15,.7);
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 20px rgba(12,12,15,.7);
   display: none;
   flex-direction: column;
   gap: 1rem;
