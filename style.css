@@ -29,7 +29,7 @@ ul{list-style:none}
 .btn--secondary:hover{background:var(--purple);color:#fff}
 
 /*  NAV  */
-.nav{position:fixed;top:0;left:0;width:100%;background:rgba(12,12,15,.7);backdrop-filter:blur(10px);z-index:1000;transition:background 0.3s;}
+.nav{position:fixed;top:0;left:0;width:100%;background:rgba(12,12,15,.8);backdrop-filter:blur(12px);z-index:1000;transition:background 0.3s;}
 .nav__container{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:1rem 1.5rem}
 .nav__logo{display:flex;align-items:center;gap:0.5rem;font-weight:700;font-size:1.2rem}
 .nav__logo img{width:30px;height:30px}
@@ -38,8 +38,8 @@ ul{list-style:none}
   position: absolute;
   top: 62px;
   right: 1rem;
-  background: rgba(12,12,15,.7);
-  backdrop-filter:blur(12px);
+  background: rgba(12,12,15,.8);
+  backdrop-filter:blur(15px);
   border-radius: 0;
   display: none;
   flex-direction: column;
@@ -83,7 +83,7 @@ ul{list-style:none}
 .nav__overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.45);
   backdrop-filter: blur(2px);
   z-index: 999;
   opacity: 0;
