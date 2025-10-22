@@ -33,7 +33,7 @@ ul{list-style:none}
 .nav__container{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:1rem 1.5rem}
 .nav__logo{display:flex;align-items:center;gap:0.5rem;font-weight:700;font-size:1.1rem}
 .nav__logo img{width:30px;height:30px}
-.nav__toggle{display:flex;font-size:1.5rem;cursor:pointer;background:none;border:none;}
+.nav__toggle{display:flex;font-size:1.8rem;font-weight:500;color:#fff;cursor:pointer;background:none;border:none;}
 .nav__menu {
   position: absolute;
   top: 62px;
@@ -74,9 +74,9 @@ ul{list-style:none}
   right: 1.5rem;
   background: none;
   border: none;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 500;
-  color: #ff00c1;
+  color: #9e35bd;
   cursor: pointer;
 }
 
@@ -107,6 +107,7 @@ ul{list-style:none}
   min-height: 100vh;
   display: grid;
   place-items: center;
+  justify-content: center;
   text-align: center;
   position: relative;
   padding: 0 1rem;
