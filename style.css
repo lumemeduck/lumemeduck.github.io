@@ -105,8 +105,10 @@ ul{list-style:none}
 /* HERO SECTION */
 .hero {
   min-height: 100vh;
-  display: grid;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
   justify-content: center;
   text-align: center;
   position: relative;
