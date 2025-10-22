@@ -418,3 +418,16 @@ h2{font-size:2.2rem;margin-bottom:2rem;text-align:center}
 .reveal-stagger.active > *:nth-child(2) { transition-delay: 0.25s; }
 .reveal-stagger.active > *:nth-child(3) { transition-delay: 0.4s; }
 .reveal-stagger.active > *:nth-child(4) { transition-delay: 0.55s; }
+
+/* OVERLAY Z-INDEX */
+.nav {
+  z-index: 2000 !important;
+}
+
+.nav__menu {
+  z-index: 2100 !important;
+}
+
+.nav__overlay {
+  z-index: 1900 !important;
+}
