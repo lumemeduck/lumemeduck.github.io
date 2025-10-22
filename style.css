@@ -40,16 +40,16 @@ ul{list-style:none}
 .nav__toggle{display:flex;font-size:1.4rem;cursor:pointer}
 .nav__menu {
   position: absolute;
-  top: 58px;
+  top: 61px;
   right: 1rem;
   background: rgba(12,12,15,.7);
-  border-radius: 12px;
+  border-radius: 0;
   display: none;
   flex-direction: column;
   gap: 1rem;
   padding: 1.5rem;
   transition: all 0.3s ease;
-  z-index: 1010;
+  z-index: 1000;
 }
 
 .nav__menu[data-visible="true"] {
