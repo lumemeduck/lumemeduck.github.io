@@ -102,28 +102,6 @@ ul{list-style:none}
   font-weight:700;
 }
 
-/* DESKTOP NAV */
-@media (min-width: 768px) {
-  .nav__menu {
-    position: static;
-    display: flex !important;
-    flex-direction: row;
-    gap: 1.5rem;
-    padding: 0;
-    background: none !important;
-    box-shadow: none !important;
-  }
-
-  .nav__menu li a {
-  padding: 0;
-  }
-  
-  .nav__toggle, 
-  .nav__close {
-    display: none;
-  }
-}
-
 /* HERO SECTION */
 .hero {
   min-height: 100vh;
@@ -355,6 +333,41 @@ h2{font-size:2.2rem;margin-bottom:2rem;text-align:center}
   100% {
     transform: translate(-30vw, 60vh) rotate(45deg);
     opacity: 0;
+  }
+}
+
+ /* DESKTOP NAV */
+@media (min-width: 768px) {
+  .nav__menu {
+    position: static !important;
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 2rem;
+    padding: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    z-index: auto !important;
+  }
+
+  .nav__menu[data-visible="true"] {
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+
+  .nav__menu li a {
+    padding: 0 !important;
+  }
+
+  .nav__overlay {
+    display: none !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+
+  .nav__toggle,
+  .nav__close {
+    display: none !important;
   }
 }
 
