@@ -25,7 +25,7 @@ ul{list-style:none}
 }
 .btn--primary{background:var(--purple);color:#fff}
 .btn--primary:hover{background:var(--pink);box-shadow:0 0 20px var(--pink)}
-.btn--secondary{background:transparent;color:#fff;border-color:var(--purple)}
+.btn--secondary{background:transparent;color:#fff !important;border-color:var(--purple)}
 .btn--secondary:hover{background:var(--purple);color:#fff}
 
 /*  NAV  */
@@ -218,7 +218,7 @@ ul{list-style:none}
 /* HERO SOCIALS */
 .hero__socials {
   position: absolute;
-  bottom: 3rem;
+  bottom: 2rem;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
