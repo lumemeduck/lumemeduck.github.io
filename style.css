@@ -218,7 +218,7 @@ ul{list-style:none}
 /* HERO SOCIALS */
 .hero__socials {
   position: absolute;
-  bottom: 0rem;
+  margin-top: 2rem;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
